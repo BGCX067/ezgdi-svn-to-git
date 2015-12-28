@@ -1,0 +1,48 @@
+#include <winresrc.h>
+#define VER_NUMBER		  8,0,2010,0421
+#define VER_STRING		  "8.0.2010.0421"
+#define VER_CUSTOM_BUILD
+#define VER_COMMENT		  "Released under FreeType and GPLv3 licenses"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION		 VER_NUMBER
+PRODUCTVERSION	 VER_NUMBER
+FILEOS			 VOS_NT_WINDOWS32
+FILETYPE		    VFT_DLL
+{
+   BLOCK "StringFileInfo"
+   {
+      BLOCK "041104B0"
+      {
+#ifdef VER_CUSTOM_BUILD
+         VALUE "Comments",			VER_COMMENT
+#endif
+         VALUE "CompanyName",       "virtlog"
+         VALUE "FileDescription",   "ezgdi dll"
+         VALUE "FileVersion",       VER_STRING
+         VALUE "InternalName",      "ezgdi"
+         VALUE "LegalCopyright",    "Released under FreeType and GPLv3 licenses."
+         VALUE "OriginalFilename",  "ezgdi.dll"
+         VALUE "ProductName",       "GDI++ ported to EasyHook"
+         VALUE "ProductVersion",	   VER_STRING
+         VALUE "URL",               "http://code.google.com/ezgdi/"
+      }
+   }
+}
+
+/*
+2 24 DISCARDABLE
+{
+"<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?>\n"
+"<assembly xmlns=""urn:schemas-microsoft-com:asm.v1"" manifestVersion=""1.0"">"
+"<assemblyIdentity version=""1.0.0.0"" processorArchitecture=""X86"" name=""2ch.gdi++.dll"" type=""win32"" />"
+"<dependency><dependentAssembly><assemblyIdentity type=""win32"" name=""2ch.gdi++.freetype"" version=""8.0.2006.1027"" processorArchitecture=""X86"" /></dependentAssembly></dependency>"
+"</assembly>"
+}
+*/
+
+#ifdef APSTUDIO_INVOKED
+#include "Please don't load this file using Visual Studio"
+#endif
